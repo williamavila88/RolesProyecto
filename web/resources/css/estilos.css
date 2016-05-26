@@ -1,0 +1,396 @@
+* {
+	box-sizing: border-box;
+}
+body{
+	background:url('../imagenes/07.jpg') #fefefe !important;
+	font-family: tahoma;
+}
+#encabezado{
+	font-size: 1.2em;
+	padding-top: 10px;
+	color: black;	
+	background-color:#222;
+}
+header .thumbnail {
+	background-color: transparent !important;
+	border: 0px solid transparent !important;
+}
+header .row{
+	margin: 0;
+}
+.row{
+	margin-right: 0;
+}
+#parrafo{
+	color:#fff;
+}
+/*NAV*/
+.navbar{
+	border: 0;
+	border-bottom: 5px solid #FBC02D;
+}
+
+nav a{
+	color:#fff !important;
+}
+.drodown-menu{
+	box-shadow: 1px 2px 2px #000;
+	z-index: 1000;
+	overflow: scroll;
+}
+.drodown-menu li{
+	float: none;
+}
+.dropdown-menu a:hover{
+	color: #000 !important;
+	background: #fff !important;
+}
+.dropdown-menu a:focus{
+	background: rgba(0, 0, 0, 0.8) !important;
+	color: #fff !important;
+}
+#sub-subMenus{
+	display: block;
+	margin-top: -28px;
+	margin-left: 155px;
+	display: none;
+}
+#submenu:hover #sub-subMenus{
+	display: block;
+}
+nav a ul:hover{
+	color: #fff;
+	text-decoration: none;
+}
+nav>ul>li{
+	display: inline-block;
+	background-color:#222;
+}
+nav li ul{
+	display: none;
+	position: absolute;
+}
+nav ul li a{
+	text-shadow: 0px 1px 1px 1px #fff;
+}
+nav ul li a:focus{
+	text-shadow: 0px 2px 2px 2px #fff;
+}
+nav li:hover>ul{
+	display:block;
+	background-color:#222;
+	color:red;
+}
+/*MIGAS DE PAN*/
+#migas{
+	background:none;
+	color:#fff;
+}
+#migas a{
+	color: #ccc;
+}
+#migas a:hover{
+	color: #FACC2E;
+	text-decoration: none;
+}
+#noPuedoAcceder{
+	color: #000;
+}
+#noPuedoAcceder:hover{
+	margin-left: 10px;
+	color: #333;
+	transition: 0.5s;
+}
+/*INPUT DE BÚSQUEDA*/
+/*.input-group{
+	width: 300px;
+	float: right;
+}*/
+.input-group-btn:last-child > .btn, .input-group-btn:last-child > .btn-group{
+	margin-top: 1px;
+}
+/*.input-group input{
+	background: #222;
+	border-top: transparent;
+	border-right: transparent;
+	border-left: transparent;
+	color: #ccc;
+}*/
+/*.input-group input:focus{
+	background: #222;
+	border-color: #FACC2E;
+	outline-color: none;
+}*/
+/*.input-group button{
+	background: #444;
+	border-top: transparent;
+	border-right: transparent;
+	border-left: transparent;
+	border-bottom: 1px solid #fff;
+	color: #fff;
+}*/
+.input-group button:hover{
+	background: #333;
+	color: #222;
+}
+.input-group button:active{
+	background: #333;
+}
+INPUTS EN GENERAL
+.form-control:focus {
+  border-color: transparent !important;
+  outline: 0;
+  border-bottom: 1px solid #fff !important;
+  -webkit-box-shadow: inset 0 0px 0px rgba(0,0,0,.075), 0 0 1px rgba(0, 0, 1, 1) !important;
+          box-shadow: inset 0 0px 1px rgba(0,0,0,.5), 0 0 0px rgba(102, 175, 233, 1) !important;
+}
+/*Seccion de Trabajo*/
+section{
+	min-height: 500px;
+}
+/*Formulario de Inicio de Sesion*/
+#inicioSesion{
+	border: 15px solid #FACC2E;
+	min-height: 400px;
+	padding: 11px;
+	background-color: #F5DA81;
+	margin:auto;
+}
+#inicioSesion #olvidar, #inicioSesion #registrarse{
+	color: #000;
+}
+#inicioSesion #olvidar:hover, #inicioSesion #registrarse:hover{
+	color: #333;
+	margin-left: 10px;
+	transition: 0.5s;
+}
+/*Span de Editar y Eliminar*/
+
+/*Detalles de tamaño de letra <H's>*/
+textarea:focus{
+	border: none;
+}
+
+h3{
+	margin: 1px 15px;
+}
+form h2{
+	padding: 5px 23px;
+}
+h6{
+	margin: 1px 15px;
+}
+#contenedor{
+	padding: 50px;
+	background: #6e6e6e;
+	background-color:#ec971f;
+	margin :auto;
+	opacity: 0.8;
+}
+#boton2{
+	margin-left:420px;
+}
+/*Formulario de Contactar*/
+#contacte{
+	width:500px;
+	margin-left: 20px;
+}
+#espacio{
+	border: 15px solid #FACC2E;
+	padding-top: 10px;
+	background-color: #F5DA81;
+}
+/*Secretaria*/
+#imagSecretaria{
+	
+	background: #fff;
+}
+#secretariaPagos{
+	border: 15px solid #FACC2E;
+	width: 1140px;
+	padding-top: 10px;
+	background-color: #F5DA81;
+}
+#secretariaEventos{
+	border: 15px solid #FACC2E;
+	width: 1140px;
+	padding-top: 10px;
+	background-color: #F5DA81;
+}
+#secretariaNovedades{
+	border: 15px solid #FACC2E;
+	padding-top: 10px;
+	background-color: #F5DA81;
+}
+#formPagos{
+	width:500px;
+	margin-left: 20px;
+}
+/*ESTILOS PARA TODOS LOS FOEMULARIOS, TODAS LAS TABLAS EXCEPTO(LOS FORMS DE INICIO DE SESION)*/
+#forms{
+	border: 15px solid #FACC2E;
+	background-color: #F5DA81;
+	
+}
+
+#asamblea1{
+	width:570px;
+	height:510px;
+	background-color: #fff;
+}
+#asamblea2{
+	width: 570px;
+	height: 510px;
+    border-right: 1px solid #D1D1D1;
+	background-color: #fff;
+}
+/*Gerente*/
+#gerentePagos{
+	border: 15px solid #FACC2E;
+	padding-top: 10px;
+	background-color: #F5DA81;
+}
+#gerenteRegistro{
+	border: 15px solid #FACC2E;
+	width: 1140px;
+	padding-top: 10px;
+	background-color: #F5DA81;
+}
+#registro{	
+	margin-left: 20px;
+}
+#gerenteNovedades{
+	border: 15px solid #FACC2E;
+	width: 1140px;
+	padding-top: 10px;
+	background-color: #F5DA81;
+}
+/*Junta Directiva*/
+
+#validacion1{
+	height: 400px;
+	background: #fff;
+}
+#cargando{
+	border: 15px solid #FACC2E;
+	padding-top: 10px;
+	background-color: #F5DA81;
+}
+/*
+Paneles de Información
+*/
+#acercaDe{
+	height: auto;
+}
+#panel{
+	height: 300px;
+	text-align: center;
+	border:1px #ccc;
+	alignment-adjust: auto;
+	animation:cubic-bezier(x1,y1,x3,y3);
+	background:#333;
+	border-radius:3px;
+	overflow: hidden;
+	box-shadow: 1px 2px 2px #eee;
+	margin-bottom: 10px;
+}
+#panelQuienesSomos{
+	height: 600px;
+	text-align: center;
+	border:1px #ccc;
+	alignment-adjust: auto;
+	animation:cubic-bezier(x1,y1,x3,y3);
+	background:#333;
+	border-radius:3px;
+	overflow: hidden;
+	box-shadow: 1px 2px 2px #eee;
+	margin-bottom: 10px;
+}
+#panelQuienesSomos1{
+	height: 500px;
+	text-align: center;
+	border:1px #ccc;
+	alignment-adjust: auto;
+	animation:cubic-bezier(x1,y1,x3,y3);
+	background:#333;
+	border-radius:3px;
+	overflow: hidden;
+	box-shadow: 1px 2px 2px #eee;
+	margin-bottom: 10px;
+}
+
+p#titulo{
+	padding-top: 8px;
+	font-family: Lobster;
+	font-size: 1.8em;
+	font-weight: bold;
+	text-shadow: 0.5px 1px 1px #ccc;
+	color: #FACC2E;
+}
+p#info{
+	padding-right: 8px;
+	padding-left: 8px;
+	font-family: cursive;
+	color: #ccc;
+}
+p#titulo1{
+	padding-top: 8px;
+	font-family: Lobster;
+	font-size: 1.8em;
+	font-weight: bold;
+	text-shadow: 0.5px 1px 1px #ccc;
+	color: #FACC2E;
+	font-size: 3.5em;
+}
+p#info1{
+	padding-right: 8px;
+	padding-left: 8px;
+	font-family: cursive;
+	color: #ccc;
+	font-size: 1.3em;
+	width: 80%;
+	margin: auto;
+}
+
+button#leerMas{
+	color: #000;
+	box-shadow: 2px 2px 2px #FACC2E;
+}
+/*Pie de página*/
+footer{
+	width: auto;
+	text-align: right;
+	height: 80px;
+	background-color: #222;
+	padding-top: 30px;
+	padding-right: 20px;
+
+}
+footer a{
+	padding: 5px 20px 5px 20px;
+	border: 1px solid #aaa;
+	border-radius: 80px;
+	color: #fff;
+	margin-top: 20px;
+	font-size: 1.5em;
+	text-decoration: none;
+}
+footer a:hover, footer a:focus{
+	color: #FACC2E;
+}
+footer span:hover{
+	color: #FACC2E;
+}
+h3{
+	text-align: center;
+	color: #fff;
+	padding: 0; 
+	margin: -30px;
+	}
+footer h5{
+	color: #fff;
+	float: left;
+}
+#pie{
+	font-size: 0.5em !important;
+}

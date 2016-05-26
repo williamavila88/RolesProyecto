@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Seleccion de Rol</title>
+        <meta http-equiv="Content-Type" content="text/html" charset="utf-8"/>
+        <link href="resources/css/font-awesome.css" rel="stylesheet" type="text/css"/>
+        <link href="resources/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+        <link href="resources/css/bootstrap-table.css" rel="stylesheet" type="text/css"/>
+        <link href="resources/css/semantic.css" rel="stylesheet" type="text/css"/>
+        <link href="resources/css/estilos.css" rel="stylesheet" type="text/css"/>
+        <link href="resources/imagenes/SIPACT.ico" rel="shortcut icon"/>
+        <link href="resources/engine0/style.css" rel="stylesheet" type="text/css"/><!--Estilos Carrusel-->
+
+        <script src="resources/js/jquery-1.11.1.js" type="text/javascript"></script>
+        <script type="text/javascript" src="../resources/js/bootstrap.min.js"></script>
+        <script src="resources/js/bootstrap.js" type="text/javascript"></script>
+        <script src="resources/js/bootstrap-table.js" type="text/javascript"></script>
+        <script type="text/javascript" src="../resources/js/ejemplo.js"></script>
+        <f:event listener="#{usuarioController.miraSession()}" type="preRenderView"></f:event>
+
+    </h:head>
+    <h:body>
+        <div class="container">
+
+            <header>
+                <div class="row" id="encabezado">
+                    <div class="col-md-3 col-sm-4 col-xs-4">
+                        <div class="thumbnail">
+                            <img src="resources/imagenes/SIPAT.png"/>
+                        </div> 
+                    </div>
+
+                    <div class="col-md-9 col-sm-8 col-xs-8">
+                        <div class="thumbnail">
+                            <img src="resources/imagenes/sipat2.png"/>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            
+            <div style="height: 350px; margin-top: 120px;">
+            <center>
+                <h:form class="form-horizontal" id="forms" style="width: 50%;">
+                    <h1><legend>Seleccionar Rol</legend></h1>
+                    
+                    <div class="form-group">
+                    <label class="col-md-2 control-label" for="rol">Rol: </label>
+                    <div class="col-md-8">
+                    <h:selectOneMenu class="form-control" value="#{usuarioController.rol}">
+                    
+                        <f:selectItems var="list" value="#{usuarioController.roles}" itemValue="#{list.roles.rol}" itemLabel="#{list.roles.rol}"></f:selectItems>
+                    </h:selectOneMenu>
+                        <br/>
+                        <div style="width: 45%;">
+                    <h:commandButton class="btn btn-success pull-left" value="Ingresar" action="#{usuarioController.redireccionar()}"></h:commandButton>
+                    <h:commandButton class="btn btn-danger pull-rigth" value="Volver" action="index"></h:commandButton>
+                    </div>
+                    </div>
+                    </div>
+                </h:form>
+            </center>
+                </div>
+            <footer>
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <h5>CopyRight © 2015 SIPACT | SENA</h5>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <a href="https://www.facebook.com"><span class = "fa fa-facebook"></span></a>
+                        <a href="www.twitter.com"><span class = "fa fa-twitter"></span></a>
+                        <a href="https://www.youtube.com"><span class = "fa fa-youtube"></span></a>
+                        <a href="www.plus.google.com"><span class = "fa fa-google-plus"></span></a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </h:body>
+            
+            
+</html>
+
