@@ -82,7 +82,7 @@ private List<Usuarioroles> roles;
         if (this.rol.equals("Administrador")) {
 
             FacesContext contex = FacesContext.getCurrentInstance();
-            contex.getExternalContext().redirect("/sipact2/faces/administrador/Administrador.xhtml");
+            contex.getExternalContext().redirect("/Roles/faces/Administrador.xhtml");
 
         }
         if (this.rol.equals("Gerente")) {
@@ -128,11 +128,11 @@ private List<Usuarioroles> roles;
             FacesContext.getCurrentInstance().
                     responseComplete();
 
-            response.sendRedirect("/sipact");
+            response.sendRedirect("/Roles");
         }
     }
          public void miraSession(String rol) throws IOException {
-
+             
         HttpServletRequest miSesion = (HttpServletRequest) FacesContext.getCurrentInstance().getExternalContext().getRequest();
         this.usuLogin = (Usuarios) miSesion.getSession().getAttribute("usuario");
         String rolSesion= (String) miSesion.getSession().getAttribute("rol");

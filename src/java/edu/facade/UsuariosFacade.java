@@ -48,16 +48,13 @@ public class UsuariosFacade extends AbstractFacade<Usuarios> {
         }
     }
     
-    public boolean prueba(){
+    public List<Usuarios> traerSocios(){
    Query q;
-   q= em.createQuery("select u from Usuarios u ");
+   q= em.createQuery("select u from Usuarios u where u.id = u.socios.idSocios");
     List<Usuarios> u   = q.getResultList();
-        if(u.isEmpty()){
-        return false;
-        }
-        else{
-        return true;
-        }
+       
+    
+    return u;
     }
 
 

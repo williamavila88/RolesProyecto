@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <meta charset="utf-8"></meta>
+        <title>Inicio Administrador</title>
+        <h:outputStylesheet name="css/jsfcrud.css"/>
+        <link rel="stylesheet" type="text/css" href="css/font-awesome.css"></link>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+        </link>
+        <link rel="stylesheet" type="text/css" href="css/estilos.css"></link>
+        <link rel="shortcut icon" href="imagenes/SIPACT.ico"></link>
+        <script src="js/jquery.validate.js"></script>
+
+        <script src="js/additional-methods.js"></script>
+        <link rel="stylesheet" type="text/css" href="engine0/style.css"></link>
+         <f:event listener="#{usuarioController.miraSession()}" type="preRenderView"></f:event>
+    </h:head>
+    <body>
+
+
+        <div class="container">
+
+            <header>
+                <div class="row" id="encabezado">
+                    <div class="col-md-3 col-sm-3 col-xs-3">
+                        <div class="thumbnail">
+                            <img src="imagenes/SIPAT.png"></img>
+                        </div>
+                    </div>
+
+                    <div class="col-md-9 col-sm-9 col-xs-9">
+                        <div class="thumbnail">
+                            <img src="imagenes/sipat2.png" ></img>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <nav class="navbar navbar-inverse">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+
+
+                            <li><h:link outcome="index" value="Inicio"></h:link></li>
+                            <li> <h:link outcome="listarGerentes" value="Gerente"></h:link></li>
+
+                            <li>  <h:link outcome="listarSecretaria" value="Secretaria"></h:link></li>
+                            <li><h:link outcome="listarRoles1" value="Roles"></h:link></li>
+                          <li><h:link outcome="listarJuntaDirectiva" value="Junta Directiva"></h:link></li>
+
+
+                        </ul>
+
+                        <ul class="nav navbar-nav navbar-right">
+
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="fa fa-cogs"></span><span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="editarPerfil.html">Editar Perfil </a></li>
+                                    <li><a href="index.html">Cerrar Sesion</a></li>
+
+
+                                </ul>
+                            </li>
+
+
+                        </ul>
+
+
+
+
+
+
+
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav>
+
+            <section >
+                <div class="row" style="margin-right: 30px;">
+
+                    <div class="col-md-12 col-sm-12 col-xs-10" style="padding-right: 0px !important; margin-right: 60px">
+                        <div class="thumbnail" style="border-radius: 0px !important;">
+                            <img src="imagenes/BienvenidoGerente.gif" width="500" height="500" ></img>
+
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <footer>
+                <a href="www.facebook.com"><span class ="fa fa-facebook"></span></a>
+                <a href="www.twitter.com"><span class = "fa fa-twitter"></span></a>
+                <a href="www.youtube.com"><span class = "fa fa-youtube"></span></a>
+                <a href="www.plus.google.com"><span class = "fa fa-google-plus"></span></a>
+                <h3>copyright@2015 SIPACT|SENA</h3>
+            </footer>
+        </div>
+        <br />
+       </body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

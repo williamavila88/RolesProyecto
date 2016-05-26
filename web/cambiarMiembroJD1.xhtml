@@ -1,0 +1,176 @@
+    
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+
+        <meta charset="utf-8"></meta>
+        <title>Cambiar miembro</title>
+        <link rel="stylesheet" type="text/css" href="css/font-awesome.css"></link>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css"></link>
+        <link rel="stylesheet" type="text/css" href="css/button.min.css"></link>
+        <link rel="stylesheet" type="text/css" href="css/semantic.css"></link>
+        <link rel="stylesheet" type="text/css" href="css/estilos.css"></link>
+        <link rel="shortcut icon" href="imagenes/SIPACT.ico"></link>
+        <script src="js/jquery.validate.js"></script>
+        <script src="js/additional-methods.js"></script>
+
+
+
+
+        <link rel="stylesheet" type="text/css" href="engine0/style.css"></link>
+        <script type="text/javascript" src="engine0/jquery.js"></script>
+         <f:event listener="#{usuarioController.miraSession()}" type="preRenderView"></f:event>
+    </h:head>
+    <h:body>
+
+
+
+        <div class="container">
+
+            <header>
+                <div class="row" id="encabezado">
+                    <div class="col-md-3 col-sm-3 col-xs-3">
+                        <div class="thumbnail">
+                            <img src="imagenes/SIPAT.png"></img>
+                        </div>
+                    </div>
+
+                    <div class="col-md-9 col-sm-9 col-xs-9">
+                        <div class="thumbnail">
+                            <img src="imagenes/sipat2.png" ></img>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <nav class="navbar navbar-inverse">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+
+
+                            <li><a href="listarJuntaDirectiva.xhtml">Regresar</a></li>
+                           
+
+                            <li class="dropdown">
+                                <ul class="dropdown-menu">
+
+
+
+                                </ul>
+
+                                <ul class="nav navbar-nav navbar-right">
+
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="fa fa-cogs"></span><span class="caret"></span></a>
+                                        <ul class="dropdown-menu">
+                                         
+                                             <li><a href="index.xhtml">Cerrar Sesion</a></li>
+
+
+                                        </ul>
+                                    </li>
+
+
+                                </ul>
+
+                            </li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav>
+
+            <ol class="breadcrumb" id="migas">
+                <li><a href="index.xhtml">Inicio</a></li>
+                <li class="active">Listado socios</li>
+            </ol>
+<form id="formato" style="margin-right: 330px">
+                <div class="containergerenteEventos">
+                    <div class="row">
+                        <div id="forms" class="col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 " style="width: 800px; ">
+
+                            <h1>Listado de socios</h1>
+                            <hr>
+                                <h4>Acá encontrara los socios que pueden remplazar a #{juntadirectivaController1.user.nombre} en el cargo #{juntadirectivaController1.juntaDirectiva.cargo}.</h4>
+                                <div class="form-group" >
+                                    <table class="table table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>Cedula</th>
+                                                <th>Nombre</th>
+                                                <th>Apellido</th>
+                                                <th>Direccion</th>
+                                                <th>Correo</th>
+
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+
+                                            <c:forEach var="adm" items="#{admController.listarGerente()}" >
+                                                <tr>
+                                                    <c:if test="${adm.socios.idSocios != null}">
+                                                        <td id="id">#{adm.socios.idSocios}</td>
+
+                                                        <td id="nom" >#{adm.nombre} </td>
+                                                        <td id="ape">#{adm.apelido}</td>
+                                                        <td id="dir">#{adm.direccion}</td>
+                                                        <td id="cor">#{adm.correo} </td>
+                                                        
+                                                        <c:if test="${adm.juntadirectiva.idjuntaDirectiva == null}"> 
+                                                        <h:form>
+                                                            <td> <h:commandButton class="ui button black" action="#{juntadirectivaController1.cambiarMiembroJD(adm)}" value="Elegir" title="Eliminar: #{adm.nombre}">
+                                                                    <f:setPropertyActionListener value="#{adm}" target="#{juntadirectivaController1.userNew}"></f:setPropertyActionListener>  
+                                                                    
+                                                                </h:commandButton></td>
+
+                                                        </h:form>
+                                                        </c:if>
+                                                          <c:if test="${adm.juntadirectiva.idjuntaDirectiva != null}">    
+                                                                <td> <a>ASIGNADO</a></td>
+                                                          
+                                                        
+                                                        </c:if>
+                                                        
+                                                    </c:if>    
+                                                </tr>
+                                            </c:forEach>           
+                                        </tbody>
+
+                                    </table>
+                                    <button type="sumit" class="ui button black">Volver a inicio</button>
+                                </div>
+                            </hr>
+                        </div>
+
+                    </div>
+                </div>
+            </form>
+
+            
+        </div>
+
+
+        <footer>
+            <a href="www.facebook.com"><span class = "fa fa-facebook"></span></a>
+            <a href="www.twitter.com"><span class = "fa fa-twitter"></span></a>
+            <a href="www.youtube.com"><span class = "fa fa-youtube"></span></a>
+            <a href="www.plus.google.com"><span class = "fa fa-google-plus"></span></a><h3>copyright@2015 SIPACT|SENA</h3>
+        </footer>
+
+    </h:body>
+</html>

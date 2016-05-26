@@ -49,5 +49,15 @@ public class UsuariorolesFacade extends AbstractFacade<Usuarioroles> {
         }
     }
     
+       public List<Usuarios> traerUsuarios(){
+       List<Usuarios> u;
+       Query q;
+       
+       q= em.createQuery("select u from Usuarios u where u.id = u.socios.idSocios");
+       u= q.getResultList();
+       return u;
+       
+       
+       }
     
 }
