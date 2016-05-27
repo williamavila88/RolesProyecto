@@ -5,6 +5,7 @@
  */
 package edu.facade;
 
+import edu.entity.Gerente;
 import edu.entity.Usuarioroles;
 import edu.entity.Usuarios;
 import java.util.List;
@@ -59,5 +60,27 @@ public class UsuariorolesFacade extends AbstractFacade<Usuarioroles> {
        
        
        }
+       
+        public List<Usuarioroles> traerGerente(int rol,int id){
+    List<Usuarioroles> ur;
+    Query q;
+    q=em.createQuery("SELECT u FROM Usuarioroles u WHERE u.roles = ? and u.idUsuario = ?");
+    ur= (List<Usuarioroles>) q.getSingleResult();
+    
+    return ur;
+    }
+       
+    
+     public List<Usuarioroles> traerSocioNewMAnager(int id){
+        List<Usuarioroles> ur;
+        Query q;
+        q=em.createQuery("select r from Usuarioroles r where r.roles = 2 and r.idUsuario = "+id);
+        ur= q.getResultList();
+        
+        return ur;
+        }
+     
+     
+     
     
 }
